@@ -4,6 +4,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { updateCart, removeFromCart } from "@/store/cartSlice";
 import { useDispatch } from "react-redux";
 import { API_URL } from "@/utils/urls";
+import Link from 'next/link'
 
 const CartItem = ({ data }) => {
     const p = data;
@@ -35,9 +36,9 @@ const CartItem = ({ data }) => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-col md:flex-row justify-between">
                     {/* PRODUCT TITLE */}
-                    <div className="text-lg md:text-2xl font-semibold text-black/[0.8]">
+                    <Link href={`product/${data.id }`} className="text-lg md:text-2xl font-semibold text-black/[0.8]">
                         {p.name}
-                    </div>
+                    </Link>
 
                     {/* PRODUCT SUBTITLE */}
                     <div className="text-sm md:text-md font-medium text-black/[0.5] block md:hidden">

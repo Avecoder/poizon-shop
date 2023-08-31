@@ -11,7 +11,7 @@ export const fetchDataFromApi = async (endpoint) => {
     const res = await fetch(`${API_URL}${endpoint}`);
     const data = await res.json();
 
-    console.log(data)
+
 
     return data;
 };

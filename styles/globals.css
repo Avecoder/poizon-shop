@@ -164,3 +164,22 @@ ul, li {
 body {
     overflow-x: hidden;
 }
+
+
+.sneakers {
+    transform: translate(-50%, -50%) ;
+}
+
+.mini-card {
+    transform: rotateY(180deg) translateX(-10px);
+    z-index: 4;
+}
+
+.mini-card__shadow {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.Toastify__toast-icon svg {
+    fill: #00AEBB;
+}

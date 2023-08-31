@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+
 import {API_URL} from '../utils/urls'
 
 const ProductCard = ({ data: { attributes: p, id } }) => {
@@ -29,7 +30,7 @@ const ProductCard = ({ data: { attributes: p, id } }) => {
                             <p className="text-base  font-medium line-through">
                                 {p.original_price} &#8381;
                             </p>
-                            <p className="ml-auto text-base font-medium text-green-500">
+                            <p className="ml-auto text-base font-medium text-[#00AEBB]">
                                 {getDiscountedPricePercentage(
                                     p.original_price,
                                     p.price

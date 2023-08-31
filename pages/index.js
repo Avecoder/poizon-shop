@@ -6,29 +6,14 @@ import { AnimationProductsWrap, AnimationText } from '@/components/animation'
 
 export default function Home({ shoes, cloth }) {
 
-  
 
 
     return (
         <main>
-            <Banner />
+            
             <Wrapper>
-                {/* heading and paragaph start */}
-                <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px] pb-[100px]">
-                    <AnimationText
-                        className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight"
-                    >
-                        Poizon delivery
-                    </AnimationText>
-                    <AnimationText
-                        className="text-md md:text-xl"
-                    >
-                        Агрегатор доставки известных зарубежных брендов, 
-                        недоступных в РФ c мирового маркетплейса Poizon 
-                        по ценам ниже, чем на российском рынке.
-                    </AnimationText>
-                </div>
-                {/* heading and paragaph end */}
+                <Banner />
+
 
                 {/* products grid start */}
                 <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px]">
@@ -87,8 +72,8 @@ export default function Home({ shoes, cloth }) {
 }
 
 export async function getStaticProps() {
-    const cloth = await fetchDataFromApi("/api/products?populate=*&[filters][type][name][$eq]=Одежда");
-    const shoes = await fetchDataFromApi("/api/products?populate=*&[filters][type][name][$eq]=Обувь");
+    const cloth = await fetchDataFromApi("/api/products?populate=*&[filters][type][name][$eq]=Одежда&pagination[page]=1&pagination[pageSize]=6");
+    const shoes = await fetchDataFromApi("/api/products?populate=*&[filters][type][name][$eq]=Обувь&pagination[page]=1&pagination[pageSize]=6");
 
     return {
         props: { cloth, shoes },

@@ -5,7 +5,7 @@ import Wrapper from "./Wrapper";
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white pt-14 pb-3">
+        <footer className="bg-[#00AEBB] text-black pt-14 pb-3">
             <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0">
                 {/* LEFT START */}
                 <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
@@ -36,19 +36,19 @@ const Footer = () => {
                             <div className="font-oswald font-medium uppercase text-sm">
                                 Помощь
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                            <div className="text-sm text-black/[0.5] hover:text-black cursor-pointer">
                                 Статус доставки
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                            <div className="text-sm text-black/[0.5] hover:text-black cursor-pointer">
                                 Доставка
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                            <div className="text-sm text-black/[0.5] hover:text-black cursor-pointer">
                                 Возврат
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                            <div className="text-sm text-black/[0.5] hover:text-black cursor-pointer">
                                 Способы оплаты
                             </div>
-                            <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                            <div className="text-sm text-black/[0.5] hover:text-black cursor-pointer">
                                 Контакты
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const Footer = () => {
             </Wrapper>
             <Wrapper className="flex justify-center mt-10 flex-col md:flex-row gap-[10px] md:gap-0">
                 {/* LEFT START */}
-                <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:text-left">
+                <div className="text-[12px] text-black/[0.5] hover:text-black cursor-pointer text-center md:text-left">
                     © 2023 Poizon delivery. All Rights Reserved
                 </div>
                 {/* LEFT END */}

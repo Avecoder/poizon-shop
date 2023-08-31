@@ -17,13 +17,13 @@ const ProductDetails = ({ product, products }) => {
     
     const p = product?.data?.attributes;
 
-    console.log(product?.data)
+    const id = product?.data?.id
 
     const notify = () => {
-        toast.success("Success. Check your cart!", {
+        toast.success("Товар успешно добавлен в корзину", {
             position: "bottom-right",
             autoClose: 5000,
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
@@ -67,7 +67,7 @@ const ProductDetails = ({ product, products }) => {
                                     <p className="text-base  font-medium line-through">
                                         &#8381;{p.original_price}
                                     </p>
-                                    <p className="ml-auto text-base font-medium text-green-500">
+                                    <p className="ml-auto text-base font-medium text-[#00AEBB]">
                                         {getDiscountedPricePercentage(
                                             p.original_price,
                                             p.price
@@ -123,8 +123,8 @@ const ProductDetails = ({ product, products }) => {
 
                             {/* SHOW ERROR START */}
                             {showError && (
-                                <div className="text-red-600 mt-1">
-                                    Выберите размер
+                                <div className="text-[#00AEBB] mt-1">
+                                    *Выберите размер
                                 </div>
                             )}
                             {/* SHOW ERROR END */}
@@ -150,6 +150,7 @@ const ProductDetails = ({ product, products }) => {
                                                 ...product?.data?.attributes,
                                                 selectedSize,
                                                 oneQuantityPrice: p.price,
+                                                id
                                             })
                                         );
                                         notify();
@@ -201,7 +202,7 @@ export async function getStaticProps({ params: { slug } }) {
         `/api/products/${slug}?populate=*`
     );
     const products = await fetchDataFromApi(
-        `/api/products?populate=*`
+        `/api/products?populate=*&pagination[page]=1&pagination[pageSize]=6`
     );
 
 

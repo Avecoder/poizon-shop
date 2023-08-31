@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 
 
-const AnimationProductsWrap = ({index, children, className, noneHover}) => {
+const AnimationProductsWrap = ({index, children, className, noneHover, delay}) => {
 
 
     return (
@@ -28,7 +28,7 @@ const AnimationProductsWrap = ({index, children, className, noneHover}) => {
                 type: "spring",
                 damping: 40,
                 mass: 1,
-                delay: .05 * index
+                delay: (delay || .05) * index
             }}
               
         >
