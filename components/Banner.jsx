@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaTelegram } from "reac
 import {motion} from 'framer-motion'
 import Image from 'next/image'
 import MiniCarousel from './MiniCarousel';
+import Link from 'next/link'
 
 const Banner = () => {
 
@@ -27,8 +28,10 @@ const Banner = () => {
                 <AnimationText
                     
                 >
-                    <button className="w-fit px-20 py-4 rounded-full bg-black text-white  font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">К покупкам</button>
-                </AnimationText>
+                    <Link href="/category/Nike">
+                        <button className="w-fit px-20 py-4 rounded-full bg-black text-white  font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">К покупкам</button>
+                    </Link>
+                    </AnimationText>
 
                 <div className="flex gap-4 justify-center md:justify-start mb-[100px]">
                     <div

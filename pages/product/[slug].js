@@ -29,6 +29,7 @@ const ProductDetails = ({ product, products }) => {
             draggable: true,
             progress: undefined,
             theme: "dark",
+            
         });
     };
 

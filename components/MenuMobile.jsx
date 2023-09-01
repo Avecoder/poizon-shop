@@ -40,11 +40,11 @@ const MenuMobile = ({
                                 {showCatMenu && (
                                     <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
                                         {categories?.map(
-                                            ({ attributes: c, id }) => {
+                                            (item, i) => {
                                                 return (
                                                     <Link
-                                                        key={id}
-                                                        href={`/category/${c.slug}`}
+                                                        key={i}
+                                                        href={`/category/${item.attributes.name}`}
                                                         onClick={() => {
                                                             setShowCatMenu(
                                                                 false
@@ -55,9 +55,9 @@ const MenuMobile = ({
                                                         }}
                                                     >
                                                         <li className="py-4 px-8 border-t flex justify-between">
-                                                            {c.name}
+                                                            {item.attributes.name}
                                                             <span className="opacity-50 text-sm">
-                                                                {`(${c.products.data.length})`}
+                                                                {`(${item.attributes.products.data.length})`}
                                                             </span>
                                                         </li>
                                                     </Link>

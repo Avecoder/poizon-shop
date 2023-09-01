@@ -50,6 +50,8 @@ const Header = () => {
         setCategories(data);
     };
 
+    console.log(categories)
+
 
     return (
         <header
