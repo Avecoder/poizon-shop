@@ -5,7 +5,7 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
     images: {
-        domains: [ "poi-b1bm.onrender.com"],
+        domains: [ "poi-b1bm.onrender.com", "poi-b1bm.onrender.comhttps", "res.cloudinary.com"],
         formats: ['image/avif', 'image/webp']
     },
 };

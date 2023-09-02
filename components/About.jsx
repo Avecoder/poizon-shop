@@ -56,7 +56,7 @@ const About = () => {
 
                 {/* overview 2 start */}
 
-                <div className="grid md:grid-cols-2 gap-20 mb-[200px] items-center">
+                <div className="grid md:grid-cols-2 gap-20 mb-[200px] items-center overflow-x-hidden overflow-y-clip">
                     <AnimationImage 
                         className="bg-black md:h-[550px] h-[500px] relative"
                         position="left"
@@ -75,7 +75,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-20 pb-[100px] items-center">
+                <div className="grid md:grid-cols-2 gap-20 pb-[100px] items-center overflow-x-hidden overflow-y-clip">
                     
                     <div className="flex flex-col gap-10">
                         <AnimationText className="font-bold text-2xl">Большой выбор моделей</AnimationText>

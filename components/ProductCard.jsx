@@ -7,6 +7,7 @@ import React from "react";
 import {API_URL} from '../utils/urls'
 
 const ProductCard = ({ data: { attributes: p, id } }) => {
+    
     return (
         <Link
             href={`/product/${id}`}
@@ -15,7 +16,7 @@ const ProductCard = ({ data: { attributes: p, id } }) => {
             <Image
                 width={500}
                 height={500}
-                src={`${API_URL}${p.image.data[0].attributes.url}`}
+                src={p.image.data[0].attributes.url}
                 alt={p.name}
             />
             <div className="p-4 text-black/[0.9]">

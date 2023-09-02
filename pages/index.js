@@ -6,7 +6,7 @@ import { AnimationProductsWrap, AnimationText } from '@/components/animation'
 
 export default function Home({ shoes, cloth }) {
 
-
+    console.log(shoes)
 
     return (
         <main>

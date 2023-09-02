@@ -4,6 +4,8 @@ import { Carousel } from "react-responsive-carousel";
 import { API_URL } from "@/utils/urls";
 
 const ProductDetailsCarousel = ({ images }) => {
+
+    console.log(images)
     return (
         <div className="text-white text-[20px] w-full max-w-[1360px] mx-auto sticky top-[50px]">
             <Carousel
@@ -16,7 +18,7 @@ const ProductDetailsCarousel = ({ images }) => {
                 {images?.map((img) => (
                     <img
                         key={img.id}
-                        src={`${API_URL}${img.attributes.url}`}
+                        src={img.attributes.url}
                         alt={img.attributes.name}
                     />
                 ))}

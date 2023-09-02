@@ -10,7 +10,7 @@ const Banner = () => {
 
   
     return (
-        <div className="grid md:grid-cols-2 mt-[70px] mb-[220px] md:items-start items-center">
+        <div className="grid md:grid-cols-2 mt-[70px] mb-[220px] md:items-start items-center overflow-x-hidden overflow-y-clip">
             <div className="flex flex-col gap-6 pt-32 items-center md:items-start">
                 <AnimationText
                     className="text-5xl text-center md:text-left font-semibold leading-tight"
