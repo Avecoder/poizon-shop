@@ -25,7 +25,7 @@ const CartItem = ({ data }) => {
             {/* IMAGE START */}
             <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
                 <Image
-                    src={`${API_URL}${p.image.data[0].attributes.url}`}
+                    src={p.image.data[0].attributes.url}
                     alt={p.name}
                     width={120}
                     height={120}
